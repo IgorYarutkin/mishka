@@ -1,0 +1,9 @@
+include /blocks/catalog/catalog
+
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Каталог - Интернет-магазин Мишки';
+
+block content
+	+catalog()

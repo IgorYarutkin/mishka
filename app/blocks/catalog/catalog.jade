@@ -1,0 +1,5 @@
+include ../products-list/products-list.jade
+
+mixin catalog()
+	+b.catalog&attributes(attributes)
+		+products-list(getData('products-list'))
