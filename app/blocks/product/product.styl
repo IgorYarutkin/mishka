@@ -1,0 +1,96 @@
+.product
+	display block
+	@media tablet-screen
+		display flex
+	@media desktop-screen
+		flex-direction column
+		width 30%
+		max-width 500px
+
+	&__link
+		@media tablet-screen
+			width 50%
+		@media desktop-screen
+			width 100%
+
+
+	&__image
+		display block
+		width 100%
+		height auto
+
+	&__text
+		padding 26px 27px 28px
+		display flex
+		flex-direction column
+		justify-content space-between
+		border 1px solid #ececec
+		@media tablet-screen
+			padding 25px 33px 27px 26px
+			width 50%
+		@media desktop-screen
+			flex-grow 1
+			padding-top 25px
+			padding-right 30px
+			width 100%
+
+	&__title
+		margin-bottom 14px
+		font-size 17px
+		font-weight bold
+		line-height 24px
+		&:hover
+			color rgba(font-color, .6)
+		&:active
+			color rgba(font-color, .3)
+		@media tablet-screen
+			margin-bottom 12px
+			padding-right 30px
+			font-size 20px
+		@media desktop-screen
+			margin-bottom 13px
+			padding-right 15px
+			line-height 24px
+
+	&__characteristics
+		margin-bottom 26px
+		@media tablet-screen
+			margin-bottom auto
+			font-size 16px
+
+	&__order-container
+		padding-top 23px
+		display flex
+		justify-content space-between
+		align-items center
+		border-top 1px solid #ececec
+		@media tablet-screen
+			padding-top 22px
+			padding-left 6px
+			padding-bottom 4px
+		@media desktop-screen
+			margin-top 20px
+			padding 25px 0 0
+
+	&__price
+		font-size 15px
+		font-weight bold
+		&:hover
+			color rgba(font-color, .6)
+		&:active
+			color rgba(font-color, .3)
+		@media tablet-screen
+			font-size 17px
+
+	&__cart
+		width 20px
+		height 19px
+		background transparent
+		border none
+		&:hover ^[0]__icon-cart
+			fill icon-hover-color
+		&:active ^[0]__icon-cart
+			fill rgba(icon-hover-color, .3)
+
+	&__icon-cart
+		fill grey-light

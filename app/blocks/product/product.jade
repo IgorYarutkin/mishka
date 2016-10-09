@@ -1,0 +1,14 @@
+include ../picture/picture.jade
+include ../icon/icon.jade
+
+mixin product(product)
+	+b('article').product&attributes(attributes)
+		+e('a').link(href='#{ product.link }')
+			+picture(product.image).product__image(alt='#{ product.title }')
+		+e.text
+			+e('h2').title #{ product.title }
+			+e('p').characteristics #{ product.characteristics }
+			+e.order-container
+				+e('span').price #{ product.price }
+				+e('button').cart
+					+icon('icon-cart')(class='icon-cart' width='20' height='19')
