@@ -1,0 +1,5 @@
+mixin picture(image)
+	picture
+		source(media='(min-width:1050px)' srcset='#{ image.desktop1x } 1x, #{ image.desktop2x } 2x')
+		source(media='(min-width:670px)' srcset='#{ image.tablet1x } 1x, #{ image.tablet2x } 2x')
+		img(src='#{ image.mobile1x }' srcset='#{ image.mobile2x }')&attributes(attributes)

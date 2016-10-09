@@ -1,0 +1,6 @@
+include ../product/product.jade
+
+mixin products-list(productsList)
+	+b('section').products-list&attributes(attributes)
+		each product in productsList
+			+product(product)
