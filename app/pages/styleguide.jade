@@ -1,0 +1,11 @@
+extends /blocks/layout-default/layout-default
+include /blocks/radio/radio.jade
+
+block head
+	- var pageTitle = 'Examples';
+
+block content
+	section
+		h2 Примеры радио-кнопок
+		+radio({"name": "accessory", "checked": true, "label": "Аксессуар для интерьера", "value": "accessory"})
+		+radio({"name": "accessory", "checked": false, "label": "Детская игрушка", "value": "toy"})
