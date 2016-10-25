@@ -1,11 +1,18 @@
 extends /blocks/layout-default/layout-default
 include /blocks/radio/radio.jade
+include /blocks/checkbox/checkbox.jade
 
 block head
 	- var pageTitle = 'Examples';
+	link(href="styleguide.css" rel="stylesheet")
 
 block content
 	section
 		h2 Примеры радио-кнопок
 		+radio({"name": "accessory", "checked": true, "label": "Аксессуар для интерьера", "value": "accessory"})
 		+radio({"name": "accessory", "checked": false, "label": "Детская игрушка", "value": "toy"})
+	section
+		h2 Примеры чекбоксов
+		+checkbox({"name": "color", "label": "Белый", "value": "white", "checked": true})
+		+checkbox({"name": "color", "label": "Серый", "value": "grey", "checked": false})
+ 
