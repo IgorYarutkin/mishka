@@ -1,6 +1,7 @@
 extends /blocks/layout-default/layout-default
 include /blocks/radio/radio.jade
 include /blocks/checkbox/checkbox.jade
+include /blocks/button/button.jade
 
 block head
 	- var pageTitle = 'Examples';
@@ -15,4 +16,6 @@ block content
 		h2 Примеры чекбоксов
 		+checkbox({"name": "color", "label": "Белый", "value": "white", "checked": true})
 		+checkbox({"name": "color", "label": "Серый", "value": "grey", "checked": false})
- 
+ 	section
+		h2 Пример кнопки
+		+button({"label": "Отправить заказ"})
