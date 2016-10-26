@@ -1,5 +1,10 @@
 extends /blocks/layout-default/layout-default
 include /blocks/radio/radio.jade
+<<<<<<< HEAD
+=======
+include /blocks/checkbox/checkbox.jade
+include /blocks/button/button.jade
+>>>>>>> 571239f... Сверстать кнопку
 
 block head
 	- var pageTitle = 'Examples';
@@ -9,3 +14,10 @@ block content
 		h2 Примеры радио-кнопок
 		+radio({"name": "accessory", "checked": true, "label": "Аксессуар для интерьера", "value": "accessory"})
 		+radio({"name": "accessory", "checked": false, "label": "Детская игрушка", "value": "toy"})
+	section(style="margin-top:10px;border-top:1px solid #000")
+		h2(style="margin:10px 0") Примеры чекбоксов
+		+checkbox({"name": "color", "label": "Белый", "checked": true})
+		+checkbox({"name": "color", "label": "Серый", "checked": false})
+	section(style="margin-top:10px;padding:0 0 10px;border-top:1px solid #000")
+		h2(style="margin:10px 0") Пример кнопки
+		+button({"label": "Отправить заказ"})
