@@ -1,0 +1,4 @@
+mixin input(content)
+	+b.input&attributes(attributes)
+		+e('span').title= content.label
+		+e('input').body(name=content.name type=content.type placeholder=content.placeholder required=content.required)
