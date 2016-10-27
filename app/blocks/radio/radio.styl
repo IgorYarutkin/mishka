@@ -1,0 +1,52 @@
+.radio
+	margin-bottom 20px
+	display flex
+	&:last-child
+		margin-bottom 0
+	@media tablet-screen
+		margin-bottom 24px
+
+	&__input
+		display none
+
+	&__check
+		flex-shrink 0
+		position relative
+		width 40px
+		height 40px
+		border 2px solid border-color-grey
+		border-radius 50%
+		@media tablet-screen
+			width 52px
+			height 52px
+		&::after
+			position absolute
+			top 50%
+			left 50%
+			display none
+			width 16px
+			height 16px
+			content ''
+			background-color color-decorate
+			border-radius 50%
+			transform translateX(-50%) translateY(-50%)
+			@media tablet-screen
+				width 20px
+				height 20px
+
+	&__label
+		padding 9px 0 0 23px
+		font-size 17px
+		font-weight bold
+		line-height 18px
+		@media tablet-screen
+			padding 14px 0 0 28px
+			font-size 19px
+
+	&__input:checked ~ &__check::after
+		display block
+
+	&:hover &__check
+		border-color color-decorate
+	&:active &__check
+		border-color alpha(border-color-grey, .3)
