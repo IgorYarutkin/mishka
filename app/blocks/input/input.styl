@@ -1,11 +1,12 @@
 .input
+	position relative
 	margin-bottom 20px
 	display block
 	&:last-child
 		margin-bottom 0
 	@media tablet-screen
-			display flex
-			margin-bottom 36px
+		margin-bottom 36px
+		display flex
 	&__title
 		margin-bottom 14px
 		display block
@@ -24,6 +25,7 @@
 		border-bottom 2px solid #000
 		outline none
 		&:focus
+			color font-grey
 			border none
 			outline none
 		&:active
@@ -32,7 +34,22 @@
 		&::placeholder
 			font-size 17px
 			color alpha(font-color, .3)
+		&:hover
+			border-bottom 2px solid icon-hover-color
 		@media tablet-screen
 			padding-left 15px
 			&::placeholder
 				font-size 19px
+
+	&__icon
+		position absolute
+		top 0
+		right 5px
+		width 30px
+		fill alpha(#000, .2)
+
+	&:hover &__icon
+		fill color-decorate
+
+	&__body:focus ~ &__icon
+		fill color-decorate
