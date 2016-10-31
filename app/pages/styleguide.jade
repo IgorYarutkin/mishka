@@ -1,7 +1,6 @@
 extends /blocks/layout-default/layout-default
 include /blocks/radio/radio.jade
 include /blocks/checkbox/checkbox.jade
-include /blocks/button/button.jade
 include /blocks/input/input.jade
 
 block head
@@ -20,7 +19,7 @@ block content
 		h2 Пример кнопки
 		+button({"label": "Отправить заказ"})
 	section
-		h2(style="margin:10px 0") Пример поля ввода
+		h2 Пример поля ввода
 		+input({"label": "Имя:", "type": "text", "name": "name", "placeholder": "Введите ваше имя", "required": true})
 		+input({"label": "Фамилия:", "type": "text", "name": "surname", "placeholder": "Укажите фамилию", "required": true})
 		+input({"type": "tel", "name": "phone", "placeholder": "+7 XXX XX XX", "required": true, "icon": "icon-phone", "pattern": "+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}"})
