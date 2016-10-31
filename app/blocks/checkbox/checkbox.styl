@@ -1,0 +1,52 @@
+.checkbox
+	margin-bottom 20px
+	display flex
+	cursor pointer
+	&:last-child
+		margin-bottom 0
+	@media tablet-screen
+		margin-bottom 24px
+
+	&__input
+		display none
+
+	&__check
+		position relative
+		width 40px
+		height 40px
+		flex-shrink 0
+		border 2px solid border-color-grey
+		@media tablet-screen
+			width 52px
+			height 52px
+		&::after
+			position absolute
+			left 0
+			bottom 0
+			display none
+			width 100%
+			height 100%
+			content ''
+			background-image url('../images/icon-yes.svg')
+			background-repeat no-repeat
+			background-position center
+			background-size 24px 17px
+			@media tablet-screen
+				background-size 33px 23px
+
+	&__label
+		padding 9px 0 0 23px
+		font-size 17px
+		font-weight bold
+		line-height 18px
+		@media tablet-screen
+			padding 14px 0 0 28px
+			font-size 19px
+
+	&__input:checked ~ &__check::after
+		display block
+
+	&:hover &__check
+		border-color color-decorate
+	&:active &__check
+		border-color alpha(border-color-grey, .3)
