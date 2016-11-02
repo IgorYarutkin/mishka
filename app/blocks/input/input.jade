@@ -1,0 +1,9 @@
+include ../icon/icon.jade
+
+mixin input(content)
+	+b.input&attributes(attributes)
+		if content.label
+			+e('span').title= content.label
+		+e('input').body(name=content.name type=content.type placeholder=content.placeholder pattern=content.pattern required=content.required)
+		if content.icon
+			+icon(content.icon)(class="icon" width='25' height='25')
