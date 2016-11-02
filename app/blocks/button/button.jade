@@ -1,0 +1,6 @@
+mixin button(content)
+	if content.href
+		+b('a').button&attributes(attributes)(href=content.href)= content.label
+	else
+		- var buttonType = content.type || 'submit'
+		+b('button').button&attributes(attributes)(type=buttonType)= content.label
