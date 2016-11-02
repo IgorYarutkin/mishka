@@ -15,8 +15,12 @@ block content
 		h2 Примеры чекбоксов
 		+checkbox({"name": "color", "label": "Белый", "value": "white", "checked": true})
 		+checkbox({"name": "color", "label": "Серый", "value": "grey", "checked": false})
- 	section
+	section
 		h2 Пример кнопки
 		+button({"label": "Отправить заказ"})
 		+button({"label": "Перейти в корзину", "href": "#"})
-		+button({"label": "Нравится", "type": "button"}) 
+		+button({"label": "Нравится", "type": "button"})
+	section(style="display:flex;flex-wrap:wrap;align-items:flex-start;")
+		h2(style="width:100%;") Пример взаимного расположения чекбокса и кнопки
+		+radio({"name": "accessory", "checked": true, "label": "Аксессуар для Вашего интерьера ", "value": "accessory"})(style="width:50%;")
+		+button({"label": "Отправить заказ очень-очень срочно"})(style="width:50%;")
